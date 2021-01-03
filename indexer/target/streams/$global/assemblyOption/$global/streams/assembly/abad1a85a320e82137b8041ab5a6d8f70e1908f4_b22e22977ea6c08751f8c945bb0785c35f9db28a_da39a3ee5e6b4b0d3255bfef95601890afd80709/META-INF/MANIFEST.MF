@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: joakim
+Build-Jdk: 1.8.0_60
+Implementation-Vendor: Eclipse.org - Jetty
+Implementation-Version: 9.3.6.v20151106
+url: http://www.eclipse.org/jetty
+Bnd-LastModified: 1446833533947
+Bundle-Classpath: .
+Bundle-Copyright: Copyright (c) 2008-2015 Mort Bay Consulting Pty. Ltd.
+Bundle-Description: Jetty module for Jetty :: XML utilities
+Bundle-DocURL: http://www.eclipse.org/jetty
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .eclipse.org/org/documents/epl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Jetty :: XML utilities
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.jetty.xml
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 9.3.6.v20151106
+Export-Package: org.eclipse.jetty.xml;version="9.3.6";uses:="org.xml.s
+ ax"
+Import-Package: org.eclipse.jetty.util;version="[9.3.6,9.3.7)",org.ecl
+ ipse.jetty.util.component;version="[9.3.6,9.3.7)",org.eclipse.jetty.u
+ til.log;version="[9.3.6,9.3.7)",org.eclipse.jetty.util.resource;versi
+ on="[9.3.6,9.3.7)",javax.xml.parsers,org.xml.sax,org.xml.sax.helpers
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.4.1.201501161923
+

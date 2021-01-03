@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: joakim
+Build-Jdk: 1.8.0_60
+Implementation-Vendor: Eclipse.org - Jetty
+Implementation-Version: 9.3.6.v20151106
+url: http://www.eclipse.org/jetty
+Bnd-LastModified: 1446834335046
+Bundle-Classpath: .
+Bundle-Copyright: Copyright (c) 2008-2015 Mort Bay Consulting Pty. Ltd.
+Bundle-Description: Jetty module for Jetty :: Websocket :: Client
+Bundle-DocURL: http://www.eclipse.org/jetty
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .eclipse.org/org/documents/epl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Jetty :: Websocket :: Client
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.jetty.websocket.client
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 9.3.6.v20151106
+Export-Package: org.eclipse.jetty.websocket.client;version="9.3.6";use
+ s:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.uti
+ l.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,
+ org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.exten
+ sions,org.eclipse.jetty.websocket.client.io,org.eclipse.jetty.websock
+ et.client.masks,org.eclipse.jetty.websocket.common,org.eclipse.jetty.
+ websocket.common.events,org.eclipse.jetty.websocket.common.io.http,or
+ g.eclipse.jetty.websocket.common.scopes",org.eclipse.jetty.websocket.
+ client.io;version="9.3.6";uses:="javax.net.ssl,org.eclipse.jetty.io,o
+ rg.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.je
+ tty.util.ssl,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websoc
+ ket.api.extensions,org.eclipse.jetty.websocket.client,org.eclipse.jet
+ ty.websocket.client.masks,org.eclipse.jetty.websocket.common,org.ecli
+ pse.jetty.websocket.common.events,org.eclipse.jetty.websocket.common.
+ io",org.eclipse.jetty.websocket.client.masks;version="9.3.6";uses:="o
+ rg.eclipse.jetty.websocket.common"
+Import-Package: org.eclipse.jetty.io;version="[9.3.6,9.3.7)",org.eclip
+ se.jetty.io.ssl;version="[9.3.6,9.3.7)",org.eclipse.jetty.util;versio
+ n="[9.3.6,9.3.7)",org.eclipse.jetty.util.component;version="[9.3.6,9.
+ 3.7)",org.eclipse.jetty.util.log;version="[9.3.6,9.3.7)",org.eclipse.
+ jetty.util.ssl;version="[9.3.6,9.3.7)",org.eclipse.jetty.util.thread;
+ version="[9.3.6,9.3.7)",org.eclipse.jetty.websocket.api;version="[9.3
+ .6,9.3.7)",org.eclipse.jetty.websocket.api.extensions;version="[9.3.6
+ ,9.3.7)",org.eclipse.jetty.websocket.common;version="[9.3.6,9.3.7)",o
+ rg.eclipse.jetty.websocket.common.events;version="[9.3.6,9.3.7)",org.
+ eclipse.jetty.websocket.common.extensions;version="[9.3.6,9.3.7)",org
+ .eclipse.jetty.websocket.common.io;version="[9.3.6,9.3.7)",org.eclips
+ e.jetty.websocket.common.io.http;version="[9.3.6,9.3.7)",org.eclipse.
+ jetty.websocket.common.scopes;version="[9.3.6,9.3.7)",javax.net.ssl
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.4.1.201501161923
+

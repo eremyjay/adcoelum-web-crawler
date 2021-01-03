@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: akka-quartz-scheduler
+Implementation-Version: 1.5.0-akka-2.4.x
+Specification-Vendor: com.enragedginger
+Specification-Title: akka-quartz-scheduler
+Implementation-Vendor-Id: com.enragedginger
+Specification-Version: 1.5.0-akka-2.4.x
+Implementation-Vendor: com.enragedginger
+

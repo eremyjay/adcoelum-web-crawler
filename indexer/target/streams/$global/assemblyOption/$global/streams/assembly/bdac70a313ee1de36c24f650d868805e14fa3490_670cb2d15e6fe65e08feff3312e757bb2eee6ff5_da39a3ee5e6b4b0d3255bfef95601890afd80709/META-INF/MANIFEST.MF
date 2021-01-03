@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: PhantomJS Driver (GhostDriver)
+Implementation-Version: 1.3.0
+Gradle-Version: 2.12
+Created-By: Ivan De Marino (https://github.com/detro)
+

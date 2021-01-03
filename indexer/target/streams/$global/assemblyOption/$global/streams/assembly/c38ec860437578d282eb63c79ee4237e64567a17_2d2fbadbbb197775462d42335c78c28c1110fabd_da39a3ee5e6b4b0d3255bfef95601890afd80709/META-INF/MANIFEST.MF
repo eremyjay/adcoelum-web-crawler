@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: Fast Classpath Scanner
+Implementation-Version: 1.93.0
+Built-By: luke
+Specification-Title: Fast Classpath Scanner
+Implementation-Vendor-Id: io.github.lukehutch
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_92
+Specification-Version: 1.93
+Implementation-URL: https://github.com/lukehutch/fast-classpath-scanne
+ r
+

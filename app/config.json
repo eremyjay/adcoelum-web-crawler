@@ -1,0 +1,357 @@
+{
+    "version" : 4,
+    "versionReset" : true,
+    "maximumCrawlers" : 1,
+    "maximumIndexers" : 0,
+    "maximumDownloaders" : 0,
+    "crawler" : {
+        "actorSystem" : {
+            "interface" : "en0",
+            "workers" : 8,
+            "dispatcher" : {
+                "executor" : "fork-join-executor",
+                "throughput" : 100,
+                "parallelism-min" : 2,
+                "parallelism-factor" : 2.0,
+                "parallelism-max" : 16,
+                "core-pool-size-min" : 2,
+                "core-pool-size-factor" : 2.0,
+                "core-pool-size-max" : 16,
+                "max-pool-size-min" : 2,
+                "max-pool-size-factor"  : 2.0,
+                "max-pool-size-max" : 16
+            }
+        },
+        "jvm" : {
+            "path": "./",
+            "jar": "crawler.jar",
+            "classpath" : "",
+            "minMem" : 64,
+            "maxMem" : 256,
+            "maxStack" : 1024,
+            "memMultiplier" : 32,
+            "options" : "-J-server -J-XX:+UseParallelOldGC -J-XX:+AggressiveOpts"
+        },
+        "linkChainDepth" : 10,
+        "broadDepth" : 5,
+        "focusDepth" : 1,
+        "revisitDelay" : 86400,
+        "revisitScore" : 100,
+        "documentMatcher" : "plain|html|xml",
+        "excludeMatcher" : "blog|career|job|article|archive|loan|news|advice|guide|profile|photos|help|lifestyle|calculator",
+        "killList" : ""
+    },
+    "downloader" : {
+        "actorSystem" : {
+            "interface" : "en0",
+            "workers" : 4,
+            "dispatcher" : {
+                "executor" : "fork-join-executor",
+                "throughput" : 100,
+                "parallelism-min" : 2,
+                "parallelism-factor" : 2.0,
+                "parallelism-max" : 16,
+                "core-pool-size-min" : 2,
+                "core-pool-size-factor" : 2.0,
+                "core-pool-size-max" : 16,
+                "max-pool-size-min" : 2,
+                "max-pool-size-factor"  : 2.0,
+                "max-pool-size-max" : 16
+            }
+        },
+        "jvm" : {
+            "path": "./",
+            "jar": "downloader.jar",
+            "classpath" : "",
+            "minMem" : 64,
+            "maxMem" : 256,
+            "maxStack" : 1024,
+            "memMultiplier" : 32,
+            "options" : "-J-server -J-XX:+UseParallelOldGC -J-XX:+AggressiveOpts"
+        },
+        "proxy" : {
+            "enable": true,
+            "enableFilters": true,
+            "enableContentTypeFilters": false,
+            "enableDomainFilter": false,
+            "enableCache" : true,
+            "cacheSize" : 50,
+            "blockExtensions" : true,
+            "blockUrls" : true,
+            "contentMatcher" : "plain|html|xml|ecmascript|javascript|css",
+            "cacheMatcher" : "ecmascript|javascript|css",
+            "extensionFilter" : "DOC|DOCX|LOG|MSG|ODT|RTF|TEX|TXT|WPD|WPS|CSV|DAT|GED|KEY|PPS|PPT|PPTX|SDF|TAR|VCF|XML|AIF|IFF|M3U|M4A|MID|MP3|MPA|WAV|WMA|3G2|3GP|ASF|AVI|FLV|M4V|MOV|MP4|MPG|SRT|SWF|VOB|WMV|BMP|DDS|GIF|JPG|JPEG|PNG|PSD|TGA|THM|TIF|TIFF|YUV|EPS|SVG|PCT|PDF|XLR|XLS|XLSX|FNT|FON|OTF|TTF|ICO|WOFF|7Z|RAR|TARGZ|ZIP",
+            "resourceMatcher" : "ecmascript|javascript|css",
+            "replacers" : {
+                "noerrorFilter" : {
+                    "contentMatcher" : "html|xml",
+                    "find" : "onerror",
+                    "replace" : "onnothing"
+                }
+            },
+            "injectors" : {
+                "overlayCloser" : {
+                    "source" : "lib/selenium/overlay_closer.html",
+                    "find" : "<head[^>]*>",
+                    "inject" : "replace"
+                }
+            },
+            "urlFilter" : "facebook|twitter|youtube",
+            "connectionReqTimeout" : 30,
+            "connectTimeout" : 15
+        },
+        "browser" : {
+            "type" : "firefox",
+            "binaryPath" : "/Applications/Firefox.app/Contents/MacOS/firefox",
+            "driverPath" : "lib/selenium/geckodriver-macos",
+            "extensionsPath" : "lib/selenium",
+            "defaultPrefsPath" : "lib/selenium/defaults.json",
+            "multiBrowser" : true,
+            "multiBrowserMultiWindow" : false,
+            "headless" : true,
+            "display" : 20,
+            "displayCommand" : "Xvfb :20",
+            "browserName" : "searchBot",
+            "actionWaitTimeout" : 3,
+            "actionWaitInternalTimeout" : 3,
+            "blockAds" : true,
+            "blockImages" : true,
+            "blockVideo" : true,
+            "pipeline" : false,
+            "maxRequests" : 32,
+            "maxConnections" : 256,
+            "maxPersistentConnections" : 16,
+            "cache" : true,
+            "cacheSize" : 50000,
+            "historySize" : 5,
+            "pageLoadTimeout" : 180,
+            "scriptLoadTimeout" : 90,
+            "conditionalTimeout" : 180,
+            "conditionalPolling" : 500,
+            "javascript" : true,
+            "quickRender" : true,
+            "sslTrustAll" : true,
+            "reloadBrowser" : true,
+            "closeOverlays" : true,
+            "reloadEveryXPages" : 20,
+            "enableDevTools" : false,
+            "enableDefaultExtensions" : false,
+            "enableFasterExtension" : false,
+            "enablePlugins" : false
+        },
+        "throttling" : {
+            "enable" : true,
+            "defaultFrequency" : 1,
+            "defaultRate" : 5,
+            "defaultWait" : 1,
+            "frequencyLimit" : 10,
+            "rateLimit" : 60,
+            "waitLimit" : 30,
+            "changeTightThreshold" : 2,
+            "changeLooseThreshold" : 2,
+            "changeTightRange" : 3,
+            "changeLooseRange" : 3,
+            "multiplier" : 2,
+            "autoAdjust" : true
+        },
+        "method" : "pull",
+        "randomiser" : 2,
+        "idleCheckFrequency" : 60,
+        "idleTimeout" : 240,
+        "doScrolls" : true,
+        "doClicks" : true,
+        "waitForActions" : true,
+        "maxSuccessClicks" : 10,
+        "maxClickAttempts" : 200,
+        "maxScrolls": 1000,
+        "pause" : false,
+        "killList" : "firefox,geckodriver-arm"
+    },
+    "indexer" : {
+        "actorSystem" : {
+            "interface" : "en0",
+            "workers" : 8,
+            "dispatcher" : {
+                "executor" : "fork-join-executor",
+                "throughput" : 100,
+                "parallelism-min" : 2,
+                "parallelism-factor" : 1.0,
+                "parallelism-max" : 16,
+                "core-pool-size-min" : 2,
+                "core-pool-size-factor" : 2.0,
+                "core-pool-size-max" : 16,
+                "max-pool-size-min" : 2,
+                "max-pool-size-factor"  : 2.0,
+                "max-pool-size-max" : 16
+            }
+        },
+        "jvm" : {
+            "path": "./",
+            "jar": "indexer.jar",
+            "classpath" : "",
+            "minMem" : 128,
+            "maxMem" : 512,
+            "maxStack" : 1024,
+            "memMultiplier" : 64,
+            "options" : "-J-server -J-XX:+UseParallelOldGC -J-XX:+AggressiveOpts"
+        },
+        "training" : {
+            "mode" : "test",
+            "output" : "trainerFile.txt",
+            "classes" : {
+                "property" : "[/][0-9]{5,8}[/]",
+                "miscellaneous" : ""
+            }
+        },
+        "names" : {
+            "mode" : "ner",
+            "trainingOutput" : "namesTraining.txt",
+            "nameList": "./lib/opennlp/names.txt",
+            "nameListMatcher": "(^|[^a-z-A-Z0-9])%s([^a-zA-Z0-9])"
+        },
+        "killList" : ""
+    },
+    "collections" : {
+        "type" : "mongodb",
+        "servers" : ["220.240.78.159"],
+        "dbname" : "adcoelum",
+        "username" : "adcoelum",
+        "password" : "adcoelum",
+        "clearDomains" : true,
+        "clearProperties" : true,
+        "clearDownloadQueue" : true,
+        "clearActivity" : true,
+        "tcpNoDelay" : true,
+        "keepAlive" : true,
+        "channelsPerNode" : 10,
+        "connectTimeout" : 10,
+        "failOverDelay" : 2,
+        "failOverRetries" : 5,
+        "defaultWaitTime" : 10,
+        "defaultConnectTime" : 10,
+        "connectRetries" : 5,
+        "defaultResultCount" : 100,
+        "defaultCountLimit" : 99999999,
+        "defaultCountSkip" : 0
+    },
+    "cache" : {
+        "type" : "aerospike",
+        "server" : "220.240.78.159",
+        "port" : 3000,
+        "namespace" : "adcoelum",
+        "set" : "cache",
+        "clearCache" : true
+    },
+    "geocoder" : {
+        "photon_source" : "http://220.240.78.159:2322"
+    },
+    "nlp" : {
+        "path" : "./lib/opennlp/",
+        "tokenizerModel" : "en-token.bin",
+        "chunkerModel" : "en-chunker.bin",
+        "posModel" : "en-pos-maxent.bin",
+        "nameFinderModel" : "agentFinder.bin",
+        "classifierModel" : "propertyCategoriser.bin"
+    },
+    "logging" : {
+        "browser" : "off",
+        "console" : true,
+        "stackTrace" : true,
+        "path" : "./logs/",
+        "level" : "trace",
+        "defaultLevel" : "off",
+        "fixedLevel" : false,
+        "intensity" : 1,
+        "fixedIntensity" : false,
+        "append" : true,
+        "formatStandard" : "%date %level %logger{10} [%file:%line] %msg%n",
+        "formatHTML" : "%date%level%logger{10}%msg",
+        "asHTML" : true,
+        "maxLogDays" : 10,
+        "maxLogSize" : "2 mb",
+        "maxLogTotalSize" : "500 mb",
+        "webConsole" : true,
+        "webStartPort" : 22005,
+        "webBuffer" : 1
+    },
+    "system_properties" : {
+        "aws" : {
+            "accessKeyId" : "AKIAIQOQWIEQAIOHWYAQ",
+            "secretKey" : "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",
+            "org.apache.commons.logging.Log" : "org.apache.commons.logging.impl.SimpleLog",
+            "org.apache.commons.logging.simplelog.log.org.apache.http" : "off"
+        }
+    },
+    "responder" : {
+        "interface" : "en0",
+        "allowLocal" : true,
+        "port" : 21005,
+        "refresh" : 2
+    },
+    "score" : {
+        "scoreValue" : 100,
+        "scoreBasePower" : 2
+    },
+    "text_compression" : true,
+    "network" : {
+        "allowLocal" : true,
+        "portMin" : 10000,
+        "portMax" : 65000
+    },
+    "pulse" : {
+        "aliveCrawlerCheck" : true,
+        "aliveIndexerCheck" : true,
+        "aliveDownloaderCheck" : true,
+        "aliveSelfCheck" : true,
+        "aliveOthersCheck" : true,
+        "cleanStrayProcesses" : true,
+        "strayProcessList" : "firefox,geckodriver-arm",
+        "strayProcessListThresholds" : "4,4",
+        "alivePulseFrequency" : 60,
+        "dispatcher" : {
+            "executor" : "fork-join-executor",
+            "throughput" : 100,
+            "parallelism-min" : 2,
+            "parallelism-factor" : 2.0,
+            "parallelism-max" : 8,
+            "core-pool-size-min" : 2,
+            "core-pool-size-factor" : 2.0,
+            "core-pool-size-max" : 8,
+            "max-pool-size-min" : 2,
+            "max-pool-size-factor"  : 2.0,
+            "max-pool-size-max" : 8
+        }
+    },
+    "seeder" : {
+        "seedFrequency" : 60,
+        "crawlDelay" : 21600,
+        "broadCrawlDelay" : 7776000,
+        "domainChunkSize" : 20,
+        "resolverTimeout" : 10,
+        "dispatcher" : {
+            "executor" : "fork-join-executor",
+            "throughput" : 100,
+            "parallelism-min" : 2,
+            "parallelism-factor" : 2.0,
+            "parallelism-max" : 8,
+            "core-pool-size-min" : 2,
+            "core-pool-size-factor" : 2.0,
+            "core-pool-size-max" : 8,
+            "max-pool-size-min" : 2,
+            "max-pool-size-factor"  : 2.0,
+            "max-pool-size-max" : 8
+        }
+    },
+    "restapi" : {
+        "port" : 20020
+    },
+    "process" : {
+        "path" : "./",
+        "file" : "searchbot.pid"
+    },
+    "activity" : {
+        "terminateThreshold" : 360,
+        "period" : 5,
+        "updateRemoteFrequency" : 60
+    }
+}

@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/ad-coelum-alpha -Dhttp.port=$PORT -Dconfig.resource=production.conf

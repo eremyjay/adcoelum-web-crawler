@@ -1,0 +1,141 @@
+{
+    "frozen": {
+        "app.update.auto": false,
+        "app.update.enabled": false,
+
+        "browser.displayedE10SNotice": 4,
+        "browser.download.manager.showWhenStarting": false,
+        "browser.EULA.override": true,
+        "browser.EULA.3.accepted": true,
+        "browser.offline": false,
+        "browser.reader.detectedFirstArticle": true,
+        "browser.safebrowsing.enabled": false,
+        "browser.safebrowsing.malware.enabled": false,
+        "browser.search.update": false,
+        "browser.selfsupport.url" : "",
+        "browser.sessionstore.resume_from_crash": false,
+        "browser.sessionstore.restore_on_demand": false,
+        "services.sync.prefs.sync.browser.sessionstore.restore_on_demand": false,
+        "browser.shell.checkDefaultBrowser": false,
+        "browser.tabs.warnOnClose": false,
+        "browser.tabs.warnOnOpen": false,
+        "browser.crashReports.unsubmittedCheck.enabled": false,
+        "browser.tabs.crashReporting.sendReport": false,
+
+        "datareporting.healthreport.service.enabled": false,
+        "datareporting.healthreport.uploadEnabled": false,
+        "datareporting.healthreport.service.firstRun": false,
+        "datareporting.healthreport.logging.consoleEnabled": false,
+        "datareporting.policy.dataSubmissionEnabled": false,
+        "datareporting.policy.dataSubmissionPolicyAccepted": false,
+
+        "extensions.autoDisableScopes": 10,
+        "extensions.blocklist.enabled": false,
+        "extensions.checkCompatibility.nightly": false,
+        "extensions.logging.enabled": false,
+        "extensions.update.enabled": false,
+        "extensions.update.notifyUser": false,
+
+        "network.manage-offline-status": false,
+        "network.http.phishy-userpass-length": 255,
+        "offline-apps.allow_by_default": true,
+        "prompts.tab_modal.enabled": false,
+
+        "security.csp.enable": false,
+        "security.fileuri.origin_policy": 3,
+        "security.fileuri.strict_origin_policy": false,
+        "signon.rememberSignons": false,
+
+        "toolkit.networkmanager.disable": true,
+        "toolkit.telemetry.prompted": 2,
+        "toolkit.telemetry.enabled": false,
+        "toolkit.telemetry.rejected": true,
+
+        "xpinstall.signatures.required": false,
+        "xpinstall.whitelist.required": false,
+
+        "javascript.options.mem.max": 128000,
+        "javascript.options.mem.high_water_mark": 32,
+        "javascript.options.mem.gc_frequency": 5,
+        "image.mem.max_decoded_image_kb": 32000
+    },
+    "mutable": {
+        "browser.dom.window.dump.enabled": false,
+        "browser.laterrun.enabled": false,
+        "browser.newtab.url": "about:blank",
+        "browser.newtabpage.enabled": false,
+        "browser.startup.page": 0,
+        "browser.startup.homepage": "about:blank",
+        "browser.startup.homepage_override.mstone": "ignore",
+        "browser.usedOnWindows10.introURL": "about:blank",
+        "dom.max_chrome_script_run_time": 30,
+        "dom.max_script_run_time": 30,
+        "dom.report_all_js_exceptions": false,
+        "javascript.options.showInConsole": false,
+        "startup.homepage_welcome_url": "about:blank",
+        "startup.homepage_welcome_url.additional": "about:blank",
+        "webdriver_accept_untrusted_certs": true,
+        "webdriver_assume_untrusted_issuer": true,
+
+		"lightweightThemes.update.enabled": false,
+		"browser.tabs.animate": false,
+		"services.blocklist.update_enabled": false,
+		"services.sync.prefs.sync.browser.search.update": false,
+		"services.sync.prefs.sync.extensions.update.enabled": false,
+
+		"browser.privatebrowsing.autostart": true,
+		"privacy.trackingprotection.enabled": true,
+
+		"capability.policy.default.Window.alert": "noAccess",
+		"capability.policy.default.Window.confirm": "noAccess",
+		"capability.policy.default.Window.prompt": "noAccess",
+		"capability.policy.default.Window.sidebar": "noAccess",
+		"browser.download.manager.scanWhenDone": false,
+
+		"capability.policy.default.Window.print": "noAccess",
+		"print.always_print_silent": true,
+		"print.postscript.enabled": false,
+		"print.postscript.cups.enabled": false,
+		"print.printer_list": "",
+		"print.printer": "",
+		"print.show_print_progress": false,
+        "print.use_global_printsettings": false,
+
+		"browser.cache.memory.enable": false,
+		"browser.cache.memory.capacity": 0,
+
+		"network.http.keep-alive": true,
+		"network.http.version": "1.1",
+		"network.dns.disableIPv6": false,
+        "network.prefetch-next": false,
+
+		"browser.link.open_newwindow.restriction": 0,
+		"dom.allow_scripts_to_close_windows": false,
+
+        "dom.disable_window_open_feature.close": true,
+        "dom.disable_window_open_feature.directories": true,
+		"dom.disable_window_open_feature.resizable": true,
+		"dom.disable_window_move_resize": true,
+        "dom.disable_window_open_feature.menubar": true,
+        "dom.disable_window_open_feature.minimizable": true,
+        "dom.disable_window_open_feature.personalbar": true,
+        "dom.disable_window_open_feature.scrollbars": true,
+        "dom.disable_window_open_feature.status": true,
+        "dom.disable_window_open_feature.titlebar": true,
+        "dom.disable_window_open_feature.toolbar": true,
+
+        "dom.disable_open_during_load": true,
+
+		"browser.chrome.toolbar_style": 1,
+		"browser.display.use_system_colors": true,
+		"geo.enabled": false,
+
+		"content.notify.ontimer": true,
+		"glayout.initialpaint.delay": 1000,
+		"content.notify.interval": 1000000,
+		"content.switch.threshold": 750000,
+
+		"svg.enabled": false,
+		"gfx.font_rendering.opentype_svg.enabled": false
+    }
+}

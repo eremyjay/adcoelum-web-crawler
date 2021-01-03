@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+
+Name: Build-Info
+Build-Timestamp: 1476809405854
+Build-Revision: 1969d75
+Build-Time: 2016-10-18 09:50:05 -0700
+
